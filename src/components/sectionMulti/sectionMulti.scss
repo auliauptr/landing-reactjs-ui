@@ -1,0 +1,108 @@
+@import '../../responsive.scss';
+
+.sectionMulti {
+    margin-top: 25rem;
+    @include respond-to(tablet) {
+        margin-top: 15rem;
+    }
+    @include respond-to(phone) {
+        margin-top: 8rem;
+    }
+    .sectionMulti__contents {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        position: relative;
+        @include respond-to(tablet) {
+        }
+        .sectionMulti__content-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 160px;
+            @include respond-to(tablet) {
+                margin-left: 4rem;
+            }
+            @include respond-to(phone) {
+                margin: 0 50px;
+            }
+            h1 {
+                color: var(--heading-color);
+                font-size: 36px;
+                letter-spacing: 0.02rem;
+                @include respond-to(phone) {
+                    font-size: 26px;
+                }
+                @include respond-to(tablet) {
+                    font-size: 30px;
+                }
+            }
+            p {
+                color: var(--paragraph-primary-color);
+                font-size: 15px;
+                letter-spacing: 0.01rem;
+                line-height: 25px;
+                @include respond-to(phone) {
+                    font-size: 13px;
+                }
+                @include respond-to(tablet) {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+            .sectionMulti__content-items {
+                margin-top: 40px;
+                display: flex;
+                align-items: start;
+                justify-content: space-between;
+                gap: 10px;
+                @include respond-to(tablet) {
+                    margin-top: 30px;
+                }
+                .sectionMulti__content-item {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    img {
+                        width: 30px;
+                        object-fit: contain;
+                        @include respond-to(tablet) {
+                            width: 25px;
+                        }
+                    }
+                    h4 {
+                        color: var(--heading-color);
+                        @include respond-to(tablet) {
+                            font-size: 16px;
+                        }
+                    }
+                    p {
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: var(--text-secondary-color);
+                    }
+                }
+            }
+        }
+        .sectionMulti__content-right {
+            flex: 1;
+            max-width: 100%;
+            width: 100%;
+            margin-right: 85px;
+            @include respond-to(phone) {
+                display: none;
+            }
+            @include respond-to(tablet) {
+                margin-right: 50px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

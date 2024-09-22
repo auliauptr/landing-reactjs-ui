@@ -1,0 +1,53 @@
+@import '../../responsive';
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    .navbar__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10rem;
+        @include respond-to(tablet) {
+            padding: 10px 4rem;
+        }
+        @include respond-to(phone) {
+            padding: 10px 50px;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            color: var(--text-primary-color);
+            font-size: 14px;
+            @include respond-to(tablet) {
+                gap: 40px;
+            }
+            @include respond-to(phone) {
+                gap: 20px;
+            }
+            li {
+                cursor: pointer;
+            }
+        }
+        h1 {
+            color: var(--logo-color);
+            font-size: 26px;
+            margin-right: 60px;
+            cursor: default;
+            @include respond-to(phone) {
+                font-size: 24px;
+                margin-right: 0;
+            }
+        }
+        button {
+            background-color: var(--button-color);
+            color: white;
+            width: 160px;
+            height: 24px;
+            @include respond-to(phone) {
+                display: none;
+            }
+        }
+    }
+}

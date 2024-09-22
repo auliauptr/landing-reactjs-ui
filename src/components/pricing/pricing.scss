@@ -1,0 +1,64 @@
+@import '../../responsive.scss';
+
+.pricing {
+    position: relative;
+    background-image: url('../../assets/Rectangle.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 10rem;
+    @include respond-to(phone) {
+        margin-top: 7rem;
+    }
+    .pricing__content {
+        padding: 20rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include respond-to(tablet) {
+            padding: 18rem 15rem;
+        }
+        @include respond-to(phone) {
+            padding: 15rem 5rem;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: var(--heading-color);
+        }
+        p {
+            margin: 0 auto;
+            max-width: 600px;
+            font-size: 16px;
+            color: var(--paragraph-primary-color);
+            line-height: 25px;
+            @include respond-to(phone) {
+                font-size: 14px;
+            }
+        }
+        .pricing__price {
+            font-size: 50px;
+            color: #222f65;
+            font-weight: 500;
+            margin-top: 35px;
+            margin-bottom: 10px;
+        }
+        .pricing__title {
+            font-size: 16px;
+            color: var(--logo-color);
+            margin-bottom: 65px;
+        }
+        .pricing__subtitle {
+            font-size: 14px;
+            color: var(--text-secondary-color);
+            margin-bottom: 10px;
+        }
+        button {
+            width: 189px;
+            height: 32px;
+            background-color: var(--button-color);
+            color: white;
+        }
+    }
+}
